@@ -42,7 +42,6 @@ let g:netrw_browse_split=4	" open in prior window
 let g:netrw_altv = 1		" change from left splitting to right splitting
 let g:netrw_liststyle=3		" tree style view in netrw
 
-
 "a automatically close brackets, parethesis, double quotes, and single quotes
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -59,18 +58,23 @@ nnoremap <Leader>da :25Lexplore<CR>
 " buffer navigation
 nnoremap <Tab> :bnext<CR>
 
-" plugins
-set t_Co=256
+" statusline
+set laststatus=2
+set statusline=%<%f%m\ \[%{&ff}:%{&fenc}:%Y]\ %{getcwd()}\ \ \[%{strftime('%Y/%b/%d\ %a\ %I:%M\ %p')}\]\ %=\ Line:%l\/%L\ Column:%c%V\ %P
 
+
+" ### PLUGINS ###
+" Install Plugin manager before :
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 call plug#end()
 
-" colors
+" themes gruvbox
+set t_Co=256
 colorscheme gruvbox
 "let g:gruvbox_termcolors=16
 set bg=dark
 
-" statusline
-set laststatus=2
-set statusline=%<%f%m\ \[%{&ff}:%{&fenc}:%Y]\ %{getcwd()}\ \ \[%{strftime('%Y/%b/%d\ %a\ %I:%M\ %p')}\]\ %=\ Line:%l\/%L\ Column:%c%V\ %P
