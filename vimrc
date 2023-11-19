@@ -18,6 +18,7 @@ set nohlsearch "disable all highlighted search results
 set mouse=a "Enable mouse support
 set clipboard+=unnamedplus "Copy/paste to system clipboard
 
+set autoindent " indent when moving to the next line
 set tabstop=4 "tabs=4spaces
 set shiftwidth=4 "whitespace by level of indentation
 
