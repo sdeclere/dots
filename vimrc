@@ -1,5 +1,6 @@
 " VIMRC
-let mapleader = " "
+let mapleader = ' '
+let maplocalleader = ' '
 
 set number " show line numbers
 set relativenumber "turn on relative line numbers
@@ -18,9 +19,9 @@ set nohlsearch "disable all highlighted search results
 set mouse=a "Enable mouse support
 set clipboard+=unnamedplus "Copy/paste to system clipboard
 
-set autoindent " indent when moving to the next line
-set tabstop=4 "tabs=4spaces
-set shiftwidth=4 "whitespace by level of indentation
+set autoindent   " indent when moving to the next line
+set tabstop=4    " tabs=4spaces
+set shiftwidth=4 " whitespace by level of indentation
 
 if has('persistent_undo')         "check if your vim version supports
   set undodir=$HOME/.vim/undo     "directory where the undo files will be stored
@@ -78,4 +79,5 @@ set t_Co=256
 colorscheme gruvbox
 "let g:gruvbox_termcolors=16
 set bg=dark
+
 
