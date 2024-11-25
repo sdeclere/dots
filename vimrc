@@ -34,9 +34,10 @@ set list
 
 " compltion menu wild
 set wildmenu
+set completeopt=noinsert,menuone,noselect " Modifies the auto-complete menu to behave more like an IDE.
 
-" autocmp
-set completeopt=longest,menuone
+set spell " enable spell check (may need to download language package)
+set ttyfast " Speed up scrolling in Vim`:wq
 
 "remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
@@ -72,9 +73,13 @@ set statusline=%<%f%m\ \[%{&ff}:%{&fenc}:%Y]\ %{getcwd()}\ \ \[%{strftime('%Y/%b
 " Install Plugin manager before :
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 " https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" for jedi clone fisrt
+" git clone --recursive https://github.com/davidhalter/jedi-vim.git
+" ~/.vim/bundle/jedi-vim
 "
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
+Plug 'davidhalter/jedi-vim'
 call plug#end()
 
 " themes gruvbox
