@@ -29,6 +29,9 @@ if has('persistent_undo')         "check if your vim version supports
   set undofile                    "turn on the feature
 endif
 
+set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<,space:.
+set list
+
 " compltion menu wild
 set wildmenu
 
